@@ -5,3 +5,21 @@ git branch -d branch_name
 
 2. Remove a Branch Remotely
 git push origin --delete branch_name
+
+Annotated Tags 
+    Use Case: Used for official releases or milestones where detailed metadata and messages are required.
+
+Lightweight Tags
+    Use Case: Used for quick tagging when metadata and messages are not needed.
+
+When to Use Rebase
+    To Maintain a Linear History
+        Use rebase when you want to clean up commit history, avoiding unnecessary merge commits and making the history easier to read.
+        Ideal for feature branches that are being worked on locally and not yet shared with others.
+    To Incorporate Upstream Changes
+        When your branch lags behind the upstream branch (e.g., main), 
+        rebasing applies your commits on top of the latest upstream changes, ensuring your branch is up to date.
+
+    Before Merging a Feature Branch
+        If you want the feature branch to have a clean history without merge commits, 
+        rebase it onto the target branch before merging.
